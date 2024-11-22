@@ -23,6 +23,8 @@
 .vertx
 .run/**.run.xml
 .envrc
+.devenv
+.pre-commit-config.yaml
 bin/
 !operations/bin/
 target/
