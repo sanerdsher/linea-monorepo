@@ -47,7 +47,7 @@ contract L2SyntheticBitcoin is CustomBridgedToken, OwnableUpgradeable {
         _baseTokens[baseToken] = coeff;
     }
 
-    function denyBaseToken(address baseToken) onlyOwner public {
+    function denyBaseToken(address baseToken) onlyOwner external {
         delete _baseTokens[baseToken];
     }
 
@@ -68,7 +68,7 @@ contract L2SyntheticBitcoin is CustomBridgedToken, OwnableUpgradeable {
         _depositAndMint(baseToken, _msgSender(), to, value);
     }
 
-    function depositAndMint(address baseToken, uint256 value) public {
+    function depositAndMint(address baseToken, uint256 value) external {
         address sender = _msgSender();
 
         _depositAndMint(baseToken, sender, sender, value);
